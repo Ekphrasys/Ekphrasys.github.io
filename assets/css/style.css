@@ -1,0 +1,358 @@
+@import 'journey.css';
+@import 'nav.css';
+@import 'skills.css';
+@import 'projects.css';
+@import 'contact.css';
+
+/* Game Theme Variables */
+:root {
+    /* Dark Theme (Default) */
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-tertiary: #0f3460;
+    --text-primary: #e6e6e6;
+    --text-secondary: #a1a1a1;
+    --accent-primary: #ff0000;
+    --accent-secondary: #ff2d75;
+    --accent-tertiary: #ffcc00;
+    --ui-border: 3px solid #333;
+    --pixel-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+
+    /* Fonts */
+    --font-primary: 'Press Start 2P', cursive;
+    --font-secondary: 'Ubuntu Mono', monospace;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    --bg-primary: #f0f0f0;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e0e0e0;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-primary: #0066ff;
+    --accent-secondary: #ff3366;
+    --accent-tertiary: #ff9900;
+
+
+}
+
+[data-theme="light"] body {
+    background-image: url('../img/2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+[data-theme="light"] .skill-node.mastered {
+    background-color: rgba(0, 255, 136, 0.5); /* Augmentez 0.3 selon vos besoins */
+    border-left: 4px solid var(--accent-primary);
+}
+
+[data-theme="light"] .skill-node.intermediate {
+    background-color: rgba(255, 204, 0, 0.5); /* Augmentez 0.3 selon vos besoins */
+    border-left: 4px solid var(--accent-tertiary);
+}
+
+[data-theme="light"] .skill-node.learning {
+  background-color: rgba(255, 45, 117, 0.5);
+    border-left: 4px solid var(--accent-secondary);
+}
+
+/* Base Styles */
+body {
+    background-image: url('../img/1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--font-secondary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 15px;
+}
+
+/* for links */
+a {
+    position: relative;
+    top: 2px;
+    color: var(--bg-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+p {
+    text-align: justify;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-top: var(--ui-border);
+    position: relative;
+    width: 100%;
+}
+
+/* Pour le header-content, ajustez l'espacement */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 1rem; /* Ajoutez cette ligne */
+}
+
+/* Style du bouton toggle */
+.theme-toggle {
+    margin-left: 1rem;
+}
+
+#themeToggle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 !important;
+}
+
+/* Animation de transition */
+body,
+.pixel-card,
+.pixel-button {
+    transition:
+        background-color 0.5s ease,
+        color 0.3s ease,
+        border-color 0.5s ease;
+}
+
+/* Pixel Text Effect */
+.pixel-text {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Game UI Elements */
+.game-ui {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 100;
+}
+
+
+/* Header Styles */
+.game-header {
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    border-bottom: var(--ui-border);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    text-shadow: var(--pixel-shadow);
+}
+
+.header-content h1 span {
+    color: var(--accent-secondary);
+}
+
+/* Pixel Button Styles */
+.pixel-button {
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    border: 3px solid var(--text-primary);
+    box-shadow: var(--pixel-shadow);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.pixel-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.pixel-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+.pixel-button.primary-btn {
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.pixel-button.outline-btn {
+    background-color: transparent;
+    border: 3px solid var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Pixel Card Styles */
+.pixel-card {
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--text-primary);
+    box-shadow: var(--pixel-shadow);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.pixel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--accent-primary);
+}
+
+/* Pixel Badge Styles */
+.pixel-badge {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Pixel Tag Styles */
+.pixel-tag {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--bg-tertiary);
+    color: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Home Section */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 200px;
+}
+
+.home-info {
+    flex: 1;
+}
+
+.home-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.focus-areas {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h2 span {
+    color: var(--accent-primary);
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 150px;
+    margin-top: 190px;
+    border-radius: 50%;
+    border: 3px solid var(--text-primary);
+    box-shadow: var(--pixel-shadow);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+}
+
+.description-text {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: left;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.console-notification {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    color: var(--accent-tertiary);
+}

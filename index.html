@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samson Cointin</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="game-theme">
+
+    <!-- Main Navigation -->
+    <header class="game-header">
+        <div class="header-content">
+            <h1 class="pixel-text">Samson Cointin</h1>
+            <div class="nav-container">
+                <nav>
+                    <ul class="nav-menu pixel-menu">
+                        <li data-section="home" class="active"><i class="fas fa-home"></i> Home</li>
+                        <li data-section="skills"><i class="fas fa-cogs"></i> Skills
+                        </li>
+                        <li data-section="projects"><i class="fas fa-gamepad"></i> Projects</li>
+                        <li data-section="journey"><i class="fas fa-map"></i> Journey
+                        </li>
+                        <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="pixel-button" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i> <!-- default (dark) -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <!-- Home Section -->
+        <section id="home" class="game-section active">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-info">
+                        <div class="focus-areas">
+                            <span class="focus-badge pixel-badge"><i class="fas fa-code"></i> Fullstack
+                                Developper</span>
+                            <span class="focus-badge pixel-badge"><i class="fas fa-mobile-alt"></i> Mobile
+                                Developper</span>
+                        </div>
+                        <h2 class="pixel-text">Web <span>Developer</span></h2>
+                        <div class="typewriter">
+                            <p class="intro-text pixel-text">
+                                _> Fullstack Developer in training at Zone01
+                            </p>
+                        </div>
+                        <p class="description-text pixel-text">
+
+                            _> Currently transitioning into a career as a full-stack developer through an intensive
+                            program at Zone01.
+                            With a strong curiosity and a hands-on approach to problem solving, I’m building solid
+                            skills in both front-end and back-end development
+                            through various languages such as Golang, Javascript and much more !
+                            <br>
+                            <br>
+                            I enjoy turning complex challenges into clean, efficient code,
+                            and I’m passionate about creating user-focused applications. I've developed both
+                            technical
+                            and human qualities through collaborative school
+                            projects and personal initiatives. As I continue to grow as a developer, I'm looking
+                            forward
+                            to contributing to innovative projects and collaborating with like-minded teams.
+
+                        <div class="action-buttons">
+                            <button class="pixel-button primary-btn"
+                                onclick="document.querySelector('[data-section=projects]').click()">
+                                <span data-i18n="viewProject">View Projects</span>
+                            </button>
+                            <button class="pixel-button outline-btn"
+                                onclick="document.querySelector('[data-section=contact]').click()">
+                                Contact Me
+                            </button>
+                            <button class="pixel-button primary-btn">
+                                <a href="assets/img/CV_Public.pdf" target="_blank" download>
+                                    <i class="fas fa-download"></i>
+                                    Download CV
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <img src="assets/img/profil.png" alt="My own face" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="game-section">
+            <div class="container">
+                <h2 class="section-title pixel-text">Skills <span>Tree</span></h2>
+
+                <div class="skill-tree">
+                    <h3 class="pixel-text">_> Hard Skills</h3>
+                    <div class="hard-skills">
+
+                        <div class="skill-branch programming">
+                            <h3 class="pixel-text">_> Programming</h3>
+                            <div class="skill-node mastered" data-skill="Go">
+                                <i class="fas fa-code"></i>
+                                <span>Go</span>
+                            </div>
+                            <div class="skill-node intermediate" data-skill="Python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-node learning" data-skill="Lua">
+                                <i class="fas fa-gamepad"></i> <!-- Lua utilise souvent une icône de lune -->
+                                <span>Lua</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-branch web-dev">
+                            <h3 class="pixel-text">_> Front_End</h3>
+                            <div class="skill-node mastered" data-skill="HTML">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="CSS">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="JavaScript">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="React">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-branch game-dev">
+                            <h3 class="pixel-text">_> Other</h3>
+                            <div class="skill-node mastered" data-skill="Git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-node intermediate" data-skill="SQL">
+                                <i class="fas fa-database"></i>
+                                <span>SQLite</span>
+                            </div>
+                            <div class="skill-node intermediate" data-skill="Docker">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-branch tools">
+                            <h3 class="pixel-text">_> Tools</h3>
+                            <div class="skill-node mastered" data-skill="Figma">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="VSCode">
+                                <i class="fas fa-code"></i>
+                                <span>VSCode</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="taiga">
+                                <i class="fas fa-list"></i>
+                                <span>Taiga</span>
+                            </div>
+                            <div class="skill-node learning" data-skill="Roblox">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Roblox Studio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="pixel-text">_> Soft Skills</h3>
+                    <div class="soft-skills">
+                        <div class="skill-branch">
+                            <h3 class="pixel-text">_> Interpersonal</h3>
+                            <div class="skill-node mastered" data-skill="Teamwork">
+                                <i class="fas fa-users"></i>
+                                <span>Cooperation</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="Communication">
+                                <i class="fas fa-comments"></i>
+                                <span>Communication 1 to 1</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="Communication">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Autonomy</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-branch">
+                            <h3 class="pixel-text">_> Cognitive</h3>
+                            <div class="skill-node mastered" data-skill="Learning Capacity">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Learning Capacity</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="Creativity">
+                                <i class="fas fa-palette"></i>
+                                <span>Creativity</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="curiosity">
+                                <i class="fas fa-book-open"></i>
+                                <span>Curiosity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emage-me">
+                        <p class="console-notification">_> To have more details about my soft-skills go check :
+                        </p>
+                        <a href="https://cv.emage-me.com/me/samson-cointin" class="pixel-button view-code-btn"
+                            target="_blank">
+                            Emage-Me CV
+                        </a>
+
+                    </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="game-section">
+            <h2 class="section-title pixel-text">My <span>Projects</span></h2>
+            <div class="projects-container">
+
+                <div class="project-filters">
+                    <button class="filter-btn pixel-button active" data-filter="all">All</button>
+                    <button class="filter-btn pixel-button" data-filter="web">Web</button>
+                    <button class="filter-btn pixel-button" data-filter="game">Game</button>
+                    <button class="filter-btn pixel-button" data-filter="cli">CLI tools</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Forum Aniverse Project -->
+                    <div class="project-card pixel-card" data-tags="web">
+                        <div class="project-media">
+                            <img src="assets/img/screenshots/aniverse-home.jpg" alt="Forum Aniverse"
+                                class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3>Forum: Aniverse</h3>
+                            <p class="project-description">
+                                A full-stack web-based platform designed to facilitate communication between users. This
+                                forum is built with a focus on simplicity, functionality, and scalability
+                            </p>
+                            <div class="project-tags">
+                                <span class="pixel-tag">JavaScript</span>
+                                <span class="pixel-tag">Go</span>
+                                <span class="pixel-tag">HTML/CSS</span>
+                                <span class="pixel-tag">SQLite</span>
+                                <span class="pixel-tag">Docker</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Ekphrasys/forum-go" class="pixel-button" target="_blank">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YT converter -->
+                    <div class="project-card pixel-card" data-tags="cli">
+                        <div class="project-media">
+                            <img src="assets/img/screenshots/YTconverter.png" alt="YT-converter" class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3>YT to mp3 Converter</h3>
+                            <p class="project-description">
+                                A command-line tool written in Go that downloads the audio from a YouTube video and
+                                converts it to an MP3 file.
+                            </p>
+                            <div class="project-tags">
+                                <span class="pixel-tag">Go</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Ekphrasys/YT-mp3-converter" class="pixel-button"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Make Your Game -->
+                    <div class="project-card pixel-card" data-tags="web game">
+                        <div class="project-media">
+                            <img src="assets/img/screenshots/pacman.png" alt="Make Your Game" class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3>Make Your Game: PacMan</h3>
+                            <p class="project-description">
+                                A browser-based PacMan clone built with vanilla JavaScript.
+                            </p>
+                            <div class="project-tags">
+                                <span class="pixel-tag">JavaScript</span>
+                                <span class="pixel-tag">HTML/CSS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Ekphrasys/Pac-Man" target="_blank" class="pixel-button">
+                                    <i class="fab fa-github"></i> View code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- RTF -->
+                    <div class="project-card pixel-card" data-tags="web">
+                        <div class="project-media">
+                            <img src="assets/img/screenshots/RTF.jpg" alt="Holy Chicken Order" class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3>Real Time Forum: The Holy Chicken Order</h3>
+                            <p class="project-description">
+                                A full-stack single page web platform designed to facilitate communication between
+                                users.
+                                Built with websockets.
+                            </p>
+                            <div class="project-tags">
+                                <span class="pixel-tag">JavaScript</span>
+                                <span class="pixel-tag">Go</span>
+                                <span class="pixel-tag">HTML/CSS</span>
+                                <span class="pixel-tag">SQLite</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Ekphrasys/Real-Time-Forum" target="_blank"
+                                    class="pixel-button">
+                                    <i class="fab fa-github"></i> View code
+                                </a>
+                            </div>
+                            <p class="console-notification">_> Work in progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section id="journey" class="game-section">
+            <div class="container">
+                <h2 class="section-title pixel-text">My <span>Journey</span></h2>
+
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            2024 - Ongoing
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Software and Application Developer</h3>
+                            <p>Hands-on training in full-stack application design and development</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            2022 - 2024
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Digital Humanities Master Degree</h3>
+                            <p>Blends technology and humanities to explore litterature, culture, and digital tools</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            2019 - 2022
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Modern Litterature Degree</h3>
+                            <p>Focus on literature, language, and critical thinking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="game-section">
+            <div class="container">
+                <h2 class="section-title pixel-text">Contact <span>Me</span></h2>
+
+                <div class="contact-grid">
+                    <div class="contact-card pixel-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>Response within 24-48h</p>
+                            <a href="mailto:samson.cointin@gmail.com" class="pixel-button" target="_blank">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card pixel-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Connect professionally</p>
+                            <a href="https://www.linkedin.com/in/samson-cointin-2b9166338/" target="_blank"
+                                class="pixel-button">
+                                <i class="fab fa-linkedin"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card pixel-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>Check out my projects</p>
+                            <a href="https://github.com/Ekphrasys" target="_blank" class="pixel-button">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="game-footer">
+        <div class="container">
+
+
+            <div class="footer-bottom">
+                <p class="pixel-text">&copy; 2025 Samson Cointin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+scroll
+-->

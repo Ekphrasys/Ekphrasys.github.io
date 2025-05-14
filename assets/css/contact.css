@@ -1,0 +1,93 @@
+/* Contact Section Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+    max-width: 1200px; /* Set a max width for the grid */
+    justify-content: center; /* Added to center the cards */
+    margin-left: auto; /* Center the grid container */
+    margin-right: auto; /* Center the grid container */
+    margin-bottom: 70px;
+}
+
+.contact-card {
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--text-primary);
+    box-shadow: var(--pixel-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.contact-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+    background-color: var(--bg-tertiary);
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--text-primary);
+    box-shadow: var(--pixel-shadow);
+}
+
+.contact-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details h3 {
+    font-family: var(--font-primary);
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-details p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-details .pixel-button {
+    margin-top: auto;
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
+}
+
+/* Specific icon colors */
+.contact-card:nth-child .contact-icon {
+    color: var(--accent-primary); /* Email */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 0.8rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}

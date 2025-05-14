@@ -1,0 +1,30 @@
+/* Navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-menu li:hover, .nav-menu li.active {
+    color: var(--accent-primary);
+}
+
+.nav-menu li.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: var(--accent-primary);
+}
