@@ -300,6 +300,10 @@ body,
     justify-content: center;
 }
 
+.home-image-mobile {
+    display: none; /* hidden by default */
+}
+
 .focus-areas {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -373,6 +377,11 @@ h2 span {
         gap: 1.5rem;
     }
 
+    .home-image-mobile {
+        display: block; /* display mobile image */
+        text-align: center;
+        margin: 1.5rem 0;
+    }
     
     .home-visual {
         order: 1;

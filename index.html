@@ -22,32 +22,32 @@
     <!-- Main Navigation -->
     <header class="game-header">
         <div class="header-content">
-        <h1 class="pixel-text">Samson Cointin</h1>
-        
-        <!-- Hamburger button for mobile -->
-        <button id="menuToggle" class="pixel-button menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <!-- default navbar (desktop) -->
-        <div class="nav-container">
-            <nav>
-                <ul class="nav-menu pixel-menu">
-                    <li data-section="home" class="active"><i class="fas fa-home"></i> Home</li>
-                    <li data-section="skills"><i class="fas fa-cogs"></i> Skills</li>
-                    <li data-section="projects"><i class="fas fa-gamepad"></i> Projects</li>
-                    <li data-section="journey"><i class="fas fa-map"></i> Journey</li>
-                    <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="theme-toggle">
-            <button id="themeToggle" class="pixel-button" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <h1 class="pixel-text">Samson Cointin</h1>
+
+            <!-- Hamburger button for mobile -->
+            <button id="menuToggle" class="pixel-button menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
             </button>
+
+            <!-- default navbar (desktop) -->
+            <div class="nav-container">
+                <nav>
+                    <ul class="nav-menu pixel-menu">
+                        <li data-section="home" class="active"><i class="fas fa-home"></i> Home</li>
+                        <li data-section="skills"><i class="fas fa-cogs"></i> Skills</li>
+                        <li data-section="projects"><i class="fas fa-gamepad"></i> Projects</li>
+                        <li data-section="journey"><i class="fas fa-map"></i> Journey</li>
+                        <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="theme-toggle">
+                <button id="themeToggle" class="pixel-button" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-    </div>
     </header>
 
     <main class="game-container">
@@ -68,9 +68,11 @@
                                 _> Fullstack Developer in training at Zone01
                             </p>
                         </div>
-                        <div class="home-image">
-                        <img src="assets/img/profil.png" alt="My own face" class="profile-image">
-                    </div>
+
+                        <!-- For mobile -->
+                        <div class="home-image-mobile">
+                            <img src="assets/img/profil.png" alt="My own face" class="profile-image">
+                        </div>
                         <p class="description-text pixel-text">
 
                             _> Currently transitioning into a career as a full-stack developer through an intensive
@@ -104,6 +106,11 @@
                                 </a>
                             </button>
                         </div>
+                    </div>
+
+                    <!-- For desktop -->
+                    <div class="home-visual">
+                        <img src="assets/img/profil.png" alt="My own face" class="profile-image">
                     </div>
                 </div>
             </div>
@@ -191,7 +198,7 @@
                                 <i class="devicon-vscode-plain"></i>
                                 <span>VSCode</span>
                             </div>
-                            <div class="skill-node mastered" data-skill="IntelIJ">            
+                            <div class="skill-node mastered" data-skill="IntelIJ">
                                 <i class="devicon-intellij-plain"></i>
                                 <span>IntelIJ</span>
                             </div>
