@@ -122,3 +122,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Clonez votre nav pour la version mobile
+const desktopNav = document.querySelector('.nav-container');
+const mobileNav = desktopNav.cloneNode(true);
+mobileNav.classList.add('mobile-nav');
+document.body.appendChild(mobileNav);
+
+// Créez l'overlay
+const menuOverlay = document.createElement('div');
+menuOverlay.className = 'menu-overlay';
+document.body.appendChild(menuOverlay);
+
+// Gestion du menu
+const menuToggle = document.getElementById('menuToggle');
+
+menuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+});
+
+menuOverlay.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+});
+
+// Fermer le menu au clic sur un lien
+mobileNav.querySelectorAll('.nav-menu li').forEach(item => {
+    item.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
+});

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -21,26 +22,32 @@
     <!-- Main Navigation -->
     <header class="game-header">
         <div class="header-content">
-            <h1 class="pixel-text">Samson Cointin</h1>
-            <div class="nav-container">
-                <nav>
-                    <ul class="nav-menu pixel-menu">
-                        <li data-section="home" class="active"><i class="fas fa-home"></i> Home</li>
-                        <li data-section="skills"><i class="fas fa-cogs"></i> Skills
-                        </li>
-                        <li data-section="projects"><i class="fas fa-gamepad"></i> Projects</li>
-                        <li data-section="journey"><i class="fas fa-map"></i> Journey
-                        </li>
-                        <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="theme-toggle">
-                <button id="themeToggle" class="pixel-button" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i> <!-- default (dark) -->
-                </button>
-            </div>
+        <h1 class="pixel-text">Samson Cointin</h1>
+        
+        <!-- Hamburger button for mobile -->
+        <button id="menuToggle" class="pixel-button menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- default navbar (desktop) -->
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-menu pixel-menu">
+                    <li data-section="home" class="active"><i class="fas fa-home"></i> Home</li>
+                    <li data-section="skills"><i class="fas fa-cogs"></i> Skills</li>
+                    <li data-section="projects"><i class="fas fa-gamepad"></i> Projects</li>
+                    <li data-section="journey"><i class="fas fa-map"></i> Journey</li>
+                    <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
+                </ul>
+            </nav>
         </div>
+        
+        <div class="theme-toggle">
+            <button id="themeToggle" class="pixel-button" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
     </header>
 
     <main class="game-container">
@@ -116,15 +123,19 @@
                         <div class="skill-branch programming">
                             <h3 class="pixel-text">_> Programming</h3>
                             <div class="skill-node mastered" data-skill="Go">
-                                <i class="fas fa-code"></i>
+                                <i class="devicon-go-original-wordmark"></i>
                                 <span>Go</span>
                             </div>
                             <div class="skill-node intermediate" data-skill="Python">
                                 <i class="fab fa-python"></i>
                                 <span>Python</span>
                             </div>
+                            <div class="skill-node intermediate" data-skill="Python">
+                                <i class="devicon-java-plain"></i>
+                                <span>Java</span>
+                            </div>
                             <div class="skill-node learning" data-skill="Lua">
-                                <i class="fas fa-gamepad"></i> <!-- Lua utilise souvent une icône de lune -->
+                                <i class="devicon-lua-plain"></i>
                                 <span>Lua</span>
                             </div>
                         </div>
@@ -143,9 +154,13 @@
                                 <i class="fab fa-js"></i>
                                 <span>JavaScript</span>
                             </div>
-                            <div class="skill-node mastered" data-skill="React">
+                            <div class="skill-node intermediate" data-skill="React">
                                 <i class="fab fa-react"></i>
                                 <span>React</span>
+                            </div>
+                            <div class="skill-node intermediate" data-skill="Next">
+                                <i class="devicon-nextjs-original-wordmark"></i>
+                                <span>Next.js</span>
                             </div>
                         </div>
 
@@ -173,12 +188,16 @@
                                 <span>Figma</span>
                             </div>
                             <div class="skill-node mastered" data-skill="VSCode">
-                                <i class="fas fa-code"></i>
+                                <i class="devicon-vscode-plain"></i>
                                 <span>VSCode</span>
+                            </div>
+                            <div class="skill-node mastered" data-skill="IntelIJ">            
+                                <i class="devicon-intellij-plain"></i>
+                                <span>IntelIJ</span>
                             </div>
                             <div class="skill-node mastered" data-skill="taiga">
                                 <i class="fas fa-list"></i>
-                                <span>Taiga</span>
+                                <span>Taiga / Notion</span>
                             </div>
                             <div class="skill-node learning" data-skill="Roblox">
                                 <i class="fas fa-gamepad"></i>
@@ -344,7 +363,7 @@
                                     <i class="fab fa-github"></i> View code
                                 </a>
                             </div>
-                            <p class="console-notification">_> Work in progress</p>
+                            <!-- <p class="console-notification">_> Work in progress</p> -->
                         </div>
                     </div>
                 </div>
