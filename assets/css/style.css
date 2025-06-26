@@ -4,7 +4,7 @@
 @import 'projects.css';
 @import 'contact.css';
 
-/* Game Theme Variables */
+/* Theme Variables */
 :root {
     /* Dark Theme (Default) */
     --bg-primary: #1a1a2e;
@@ -46,12 +46,12 @@
 }
 
 [data-theme="light"] .skill-node.mastered {
-    background-color: rgba(0, 255, 136, 0.5); /* Augmentez 0.3 selon vos besoins */
+    background-color: rgba(0, 255, 136, 0.5);
     border-left: 4px solid var(--accent-primary);
 }
 
 [data-theme="light"] .skill-node.intermediate {
-    background-color: rgba(255, 204, 0, 0.5); /* Augmentez 0.3 selon vos besoins */
+    background-color: rgba(255, 204, 0, 0.5);
     border-left: 4px solid var(--accent-tertiary);
 }
 
@@ -108,7 +108,6 @@ footer {
     width: 100%;
 }
 
-/* Pour le header-content, ajustez l'espacement */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -119,7 +118,7 @@ footer {
     gap: 1rem; /* Ajoutez cette ligne */
 }
 
-/* Style du bouton toggle */
+/* button toggle style */
 #themeToggle {
     width: 40px;
     height: 40px;
@@ -130,7 +129,7 @@ footer {
     border-radius: 0 !important;
 }
 
-/* Animation de transition */
+/* transition animation */
 body,
 .pixel-card,
 .pixel-button {
@@ -370,10 +369,9 @@ h2 span {
         margin: 10px;
     }
     
-    /* Ajustements complémentaires pour le contenu home */
     .home-content {
         flex-direction: column;
-        margin-bottom: 100px; /* Réduction de la marge */
+        margin-bottom: 100px;
         gap: 1.5rem;
     }
 
@@ -384,8 +382,7 @@ h2 span {
     }
     
     .home-visual {
-        order: 1;
-        margin-top: 2rem;
+        display: none;
     }
     
     .profile-image {
@@ -398,11 +395,11 @@ h2 span {
     }
     
     .action-buttons {
-        flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
+        flex-wrap: wrap;
     }
     
     .pixel-button {
-        font-size: 0.6rem; /* Légère réduction */
+        font-size: 0.6rem;
         padding: 0.4rem 0.8rem;
     }
 }

@@ -129,13 +129,10 @@
         left: 0 !important;
     }
 
-    .timeline-item:nth-child(even) {
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-dot {
-        left: 31px;
+   .timeline-dot {
+        left: 18px !important; /* Aligned with timeline */
+        transform: none !important;
+        top: 20px; /* aligned vertically */
     }
 
     .timeline-date {

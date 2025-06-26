@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélection des éléments
+    // Select elements
     const themeToggle = document.getElementById('themeToggle');
     const icon = themeToggle.querySelector('i');
     const navItems = document.querySelectorAll('.nav-menu li');
     const sections = document.querySelectorAll('.game-section');
     
-    // Vérifie le thème stocké ou la préférence système
+    // Check stored theme or system preference
     const savedTheme = localStorage.getItem('theme') || 
                       (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
     
-    // Applique le thème au chargement
+    // Apply theme on load
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
     
-    // Gestion du clic sur le toggle
+    // Handle toggle click
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
         
-        // Animation GSAP pour un effet smooth
+        // GSAP animation for smooth effect
         gsap.fromTo("body", 
             { backgroundColor: currentTheme === 'dark' ? '#1a1a2e' : '#f0f0f0' },
             { backgroundColor: newTheme === 'dark' ? '#1a1a2e' : '#f0f0f0', duration: 0.5 }
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateThemeIcon(theme) {
         if (theme === 'dark') {
             icon.classList.replace('fa-sun', 'fa-moon');
-            icon.style.color = '#ffcc00'; // Jaune pour la lune
+            icon.style.color = '#ffcc00'; // Yellow for moon
         } else {
             icon.classList.replace('fa-moon', 'fa-sun');
-            icon.style.color = '#ff9900'; // Orange pour le soleil
+            icon.style.color = '#ff9900'; // Orange for sun
         }
     }
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const cardTags = card.getAttribute('data-tags').split(' ');
                 
                 if (filterValue === 'all' || cardTags.includes(filterValue)) {
-                    card.style.display = 'flex'; // or 'block' depending on your layout
+                    card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
@@ -64,27 +64,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navigation cliquable
+    // Clickable navigation
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const sectionId = item.getAttribute('data-section');
             
-            // Retirer la classe active de tous les éléments
+            // Remove active class from all items
             navItems.forEach(navItem => navItem.classList.remove('active'));
             sections.forEach(section => section.classList.remove('active'));
             
-            // Ajouter la classe active à l'élément cliqué
+            // Add active class to clicked item
             item.classList.add('active');
             document.getElementById(sectionId).classList.add('active');
             
-            // Scroll vers la section
+            // Scroll to section
             document.getElementById(sectionId).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
 
-    // Scroll event pour mettre à jour la navigation
+    // Scroll event to update navigation
     window.addEventListener('scroll', () => {
         let currentSection = '';
         
@@ -105,10 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialiser ScrollTrigger
+    // Initialize ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     
-    // Animations pour chaque section
+    // Animations for each section
     sections.forEach(section => {
         gsap.from(section, {
             scrollTrigger: {
@@ -123,18 +123,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Clonez votre nav pour la version mobile
+// Clone nav for mobile
 const desktopNav = document.querySelector('.nav-container');
 const mobileNav = desktopNav.cloneNode(true);
 mobileNav.classList.add('mobile-nav');
 document.body.appendChild(mobileNav);
 
-// Créez l'overlay
+// create overlay for mobile menu
 const menuOverlay = document.createElement('div');
 menuOverlay.className = 'menu-overlay';
 document.body.appendChild(menuOverlay);
 
-// Gestion du menu
 const menuToggle = document.getElementById('menuToggle');
 
 menuToggle.addEventListener('click', () => {
@@ -149,7 +148,7 @@ menuOverlay.addEventListener('click', () => {
     document.body.classList.remove('menu-open');
 });
 
-// Fermer le menu au clic sur un lien
+// Close menu when clicking on a menu item
 mobileNav.querySelectorAll('.nav-menu li').forEach(item => {
     item.addEventListener('click', () => {
         mobileNav.classList.remove('active');
