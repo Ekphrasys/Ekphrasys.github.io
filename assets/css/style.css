@@ -120,10 +120,6 @@ footer {
 }
 
 /* Style du bouton toggle */
-.theme-toggle {
-    margin-left: 1rem;
-}
-
 #themeToggle {
     width: 40px;
     height: 40px;
@@ -340,6 +336,7 @@ h2 span {
     margin-bottom: 2rem;
     max-width: 800px;
     text-align: left;
+    font-size: 1rem; /* default size */
 }
 
 .action-buttons {
@@ -355,4 +352,48 @@ h2 span {
     font-family: var(--font-primary);
     font-size: 0.7rem;
     color: var(--accent-tertiary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .description-text {
+        font-size: 0.9rem; /* mobile reduction size of text */
+        padding: 0 1rem; /* inner margin */
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+        margin: 10px;
+    }
+    
+    /* Ajustements complémentaires pour le contenu home */
+    .home-content {
+        flex-direction: column;
+        margin-bottom: 100px; /* Réduction de la marge */
+        gap: 1.5rem;
+    }
+
+    
+    .home-visual {
+        order: 1;
+        margin-top: 2rem;
+    }
+    
+    .profile-image {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .action-buttons {
+        flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
+    }
+    
+    .pixel-button {
+        font-size: 0.6rem; /* Légère réduction */
+        padding: 0.4rem 0.8rem;
+    }
 }
